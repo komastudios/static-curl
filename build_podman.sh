@@ -3,7 +3,7 @@ set -e
 
 mkdir -p ./release
 
-platforms=(linux/amd64 linux/arm64 linux/arm/v7)
+platforms=(linux/amd64 linux/386 linux/arm64 linux/arm/v7)
 
 build_platform() {
     podman build \
