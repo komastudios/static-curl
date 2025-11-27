@@ -12,6 +12,7 @@ COPY build.sh mykey.asc ./
 RUN case "${TARGETARCH}" in \
       "386") export ARCH="i386" ;; \
       "arm64") export ARCH="aarch64" ;; \
+      "arm") export ARCH="armv7" ;; \
       *) export ARCH="${TARGETARCH}" ;; \
     esac && \
     ./build.sh
