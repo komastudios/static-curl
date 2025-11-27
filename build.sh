@@ -69,5 +69,6 @@ ldd src/curl && exit 1 || true
 # we only want to save curl here
 mkdir -p /tmp/release/
 mv src/curl "/tmp/release/curl-$ARCH"
+sha256sum "/tmp/release/curl-$ARCH" | cut -d' ' -f1 | tr -d '\n' > "/tmp/release/curl-$ARCH.sha256"
 cd ..
 rm -rf "curl-${CURL_VERSION}/"
